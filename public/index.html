@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer ></script>
 </head>
-<body>
-    <h2 class="bg-red-700">hello </h2>
+
+<body class="flex flex-col justify-center items-center h-screen w-screen bg-slate-500">
+    <!--Calculator Area-->
+    <div class="border bg-blue-300 pt-10  flex flex-col gap-3 p-4">
+        <!-- display screen-->
+        <div class="border bg-white h-24 flex items-end justify-end flex-col">
+
+            <!--second result-->
+            <div class="text-2xl pr-4"></div>
+            <!--second result-->
+
+            <!--main result-->
+            <div class="display-screen text-4xl pr-4"></div>
+            <!--main result-->
+
+        </div>
+        <!--/ display screen-->
+
+        <!--buttons -->
+        <div class="flex flex-col gap-3 p-4 justify-around">
+            <!-- first row -->
+            <div class="flex gap-x-2">
+                <button class="buttonNumber w-24 h-16 bg-orange-200 text-3xl">7</button>
+                <button class="buttonNumber w-24 h-16 bg-orange-200 text-3xl">8</button>
+                <button class="buttonNumber w-24 h-16 bg-orange-200 text-3xl">9</button>
+                <button class="buttonOperator w-24 h-16 bg-yellow-300 text-3xl">/</button>
+            </div>
+            <!--/ first row -->
+
+            <!-- second row -->
+            <div class="flex gap-x-2">
+                <button class="buttonNumber w-24 h-16 bg-orange-200 text-3xl">4</button>
+                <button class="buttonNumber w-24 h-16 bg-orange-200 text-3xl">5</button>
+                <button class="buttonNumber w-24 h-16 bg-orange-200 text-3xl">6</button>
+                <button class="buttonOperator w-24 h-16 bg-yellow-300 text-3xl">*</button>
+            </div>
+            <!--/ second row -->
+
+            <!-- third  row -->
+            <div class="flex gap-x-2">
+                <button class="buttonNumber w-24 h-16 bg-orange-200 text-3xl">1</button>
+                <button class="buttonNumber w-24 h-16 bg-orange-200 text-3xl">2</button>
+                <button class="buttonNumber w-24 h-16 bg-orange-200 text-3xl">3</button>
+                <button class="buttonOperator w-24 h-16 bg-yellow-300 text-3xl">+</button>
+            </div>
+            <!--/ third row -->
+
+            <!-- last row -->
+            <div class="flex gap-x-2">
+                <button class="w-24 h-16 bg-red-400 text-3xl clear-button">c</button>
+                <button class="buttonNumber w-24 h-16 bg-orange-200 text-3xl">0</button>
+                <button class="w-24 h-16 bg-orange-200 text-3xl equals-button">=</button>
+                <button class="buttonOperator w-24 h-16 bg-yellow-300 text-3xl">-</button>
+            </div>
+            <!--/ last row -->
+        </div>
+        <!--/buttons -->
+
+    </div>
+    <!--/Calculator Area-->
+
 </body>
 </html>
