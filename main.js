@@ -7,6 +7,7 @@ const displayScreen = document.querySelector('.display-screen');
 const equalButton = document.querySelector('.equals-button');
 const clearButton = document.querySelector('.clear-button');
 
+const delButton = document.querySelector('.del-button');
 
 // Add event listeners to number buttons
 numberButtons.forEach(button => {
@@ -29,11 +30,17 @@ operatorButtons.forEach(button => {
 });
 
 equalButton.addEventListener('click', () => {
-  const expression = displayScreen.textContent;
+  let expression = displayScreen.textContent;
+  expression = expression.replace('÷', '/');
+  expression = expression.replace('x', '*');
   const result = eval(expression); // Evaluate the expression using eval()
   displayScreen.textContent = result;//update the display
 });
 
 clearButton.addEventListener('click', () => {
   displayScreen.textContent = '';
+});
+
+delButton.addEventListener('click', () => {
+  displayScreen.textContent = displayScreen.textContent.slice(0, -1);
 });
