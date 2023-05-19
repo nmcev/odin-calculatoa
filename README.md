@@ -12,4 +12,4 @@ This project includes with the odin project journey
 
 ### Live Demo 
 
-[Live Preview](https://github.com/nmcev)
+[Live Preview](https://nmcev.github.io/Odin-calculatoa/)
