@@ -28,6 +28,19 @@ function calculate() {
   }
 }
 
+function performCalculation() {
+  if (firstNumber !== '' && operator !== '' && secondNumber !== '') {
+    const result = calculate();
+    displayScreen.textContent = result;
+    firstNumber = result;
+    secondNumber = '';
+  } else if (operator == '') {
+    operator = '+';
+    calculate(); // Call the calculate function to perform the default operation
+    displayScreen.textContent = firstNumber; // Display the result
+    operator = ''; // Reset operator after displaying the result
+  }
+}
 
 //evens listeners  
 // Add event listeners to number buttons
@@ -49,26 +62,17 @@ numberButtons.forEach(button => {
 operatorButtons.forEach(button => {
   button.addEventListener('click', () => {
     const buttonText = button.textContent;
-    operator = button.textContent
-
-    // Update the display screen with the clicked operator
+    if (firstNumber !== '' && secondNumber !== '') {
+      performCalculation();
+    }
+    operator = buttonText;
     displayScreen.textContent += buttonText;
   });
 });
 
 equalButton.addEventListener('click', () => {
-  if (firstNumber !== '' && operator !== '' && secondNumber !== '') {
-    const result = calculate();
-    displayScreen.textContent = result;
-    firstNumber = result;
-    secondNumber = '';
-    operator = '';
-  } else if (operator == '') {
-  operator = '+';
-    calculate(); // Call the calculate function to perform the default operation
-    displayScreen.textContent = firstNumber; // Display the result
-    operator = ''; // Reset operator after displaying the result
-  }
+  performCalculation()
+  operator = ''
 
 });
 
