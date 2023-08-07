@@ -70,6 +70,14 @@ numberButtons.forEach(button => {
 // Add event listeners to operator buttons
 operatorButtons.forEach(button => {
   button.addEventListener('click', () => {
+    if (
+      (displayScreen.textContent.includes('+') && secondNumber == "") ||
+      (displayScreen.textContent.includes('-') && secondNumber == "") ||
+      (displayScreen.textContent.includes('x') && secondNumber == "") ||
+      (displayScreen.textContent.includes('÷') && secondNumber == "")
+    ) {
+      return;
+    }
     const buttonText = button.textContent;
     if (firstNumber !== '' && secondNumber !== '') {
       performCalculation();
