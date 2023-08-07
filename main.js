@@ -31,6 +31,9 @@ function calculate() {
       return "Can't divide by zero";
     }
     return firstNumber /= secondNumber;
+  } else if (operator == "%") {
+    let remainder = Math.floor((firstNumber % secondNumber));
+    return remainder;
   }
 }
 
