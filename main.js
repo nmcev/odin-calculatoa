@@ -24,6 +24,12 @@ function calculate() {
   } else if (operator === "x") {
     return firstNumber *= secondNumber;
   } else if (operator === "÷") {
+    if (secondNumber == 0 && firstNumber == 0) {
+      return "undefine"
+    }
+    if (secondNumber == 0) {
+      return "Can't divide by zero";
+    }
     return firstNumber /= secondNumber;
   }
 }
