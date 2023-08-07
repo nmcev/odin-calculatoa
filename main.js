@@ -91,4 +91,11 @@ clearButton.addEventListener('click', () => {
 
 delButton.addEventListener('click', () => {
   displayScreen.textContent = displayScreen.textContent.slice(0, -1);
+
+  if (operator == '') {
+    firstNumber = displayScreen.textContent
+    console.log(firstNumber)
+  } else {
+    secondNumber = displayScreen.textContent
+  }
 });
